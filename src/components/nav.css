@@ -1,0 +1,40 @@
+.navLog {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+
+.navAboutRent {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    font-size: 30px;
+    align-items: center;
+
+}
+
+.navContainer {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 40;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: fantasy;
+    border: 1px solid green;
+    background: linear-gradient(to right, #00AAFF, #00ff6C);
+}
+
+.navLogo {
+    font-size: 50px;
+    color: green;
+    font-weight: bolder;
+    font-family: sans-serif;
+    margin-right: 40px;
+    align-items: center;
+
+}

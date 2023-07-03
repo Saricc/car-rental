@@ -1,14 +1,14 @@
 import Footer from "./Footer/Footer";
-import Navigacija from "./Navigacija";
+import Navigation from "./Navigation";
 
 export default function PageWrapper({ children }) {
     return (
-        <div style={{ backgroundImage: "url(slikeSve/background.jpg)" }}>
+        <div style={{ background: "linear-gradient(#e66465, #9198e5)" }}
+        >
 
-            <Navigacija boja="Crvena" />
-
-
+            <Navigation />
             {children}
+            <Footer />
         </div>
     )
 }

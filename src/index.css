@@ -1,3 +1,12 @@
 .tekst {
   font-size: 50px;
 }
+
+.font-belissimo {
+  font-family: 'Belanosima', sans-serif;
+}
+
+.formInputGroup label {
+  color: azure;
+
+}

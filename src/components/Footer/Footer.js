@@ -3,7 +3,7 @@ import './footer.css'
 export default function Footer() {
 
     return (
-        <div className='footer' style={{ display: "flex", justifyContent: 'space-between', flexDirection: "row" }}>
+        <div className='footer' >
             <div className='whyus'>
                 <h1> Why us?</h1>
                 <p>
@@ -14,7 +14,7 @@ export default function Footer() {
                 <li>Split</li>
                 <li>Zagreb</li>
                 <li>Rijeka</li>
-                <li>Osijek</li>
+
             </ul></div>
             <div className='contact'>
 

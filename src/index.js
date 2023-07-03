@@ -5,11 +5,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App';
-import Navigacija from './components/Navigacija';
-import Onama from './components/Onama';
-import Iznajmi from './components/Iznajmi';
-import Kupi from './components/Kupi';
-
+import FormExample from './components/RegistrationForm';
+import Registration from './components/Registration';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import AboutUs from './components/AboutUs';
+import Rent from './components/Rent';
+import Bill from './components/Bill';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
@@ -20,20 +23,43 @@ const router = createBrowserRouter([
 
   },
   {
-    path: "/Onama",
-    element: <Onama />,
+    path: "/AboutUs",
+    element: <AboutUs />,
 
   },
   {
-    path: "/Iznajmi",
-    element: <Iznajmi />,
-
-  }, ,
-  {
-    path: "/Kupi",
-    element: <Kupi />,
+    path: "/Rent",
+    element: <Rent />,
 
   },
+  {
+    // 
+    path: "/Bill/:id/:start/:end/:price",
+
+    element: <Bill />,
+
+  },
+  {
+    path: "/FormExample",
+    element: <FormExample />,
+
+  },
+
+  {
+    path: "/Registration",
+    element: <Registration />,
+
+  },
+  {
+    path: "/Login",
+    element: <Login />,
+
+  },
+  {
+    path: "/Logout",
+    element: <Logout />,
+
+  }
 
 ]);
 
