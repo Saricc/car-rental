@@ -1,13 +1,5 @@
-.footer {
+.page-footer {
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 20px;
-    color: #000;
 
-    font-weight: bold;
-    font-family: fantasy;
-    border: 1px solid green;
     background: linear-gradient(to right, #00AAFF, #00ff6C)
 }

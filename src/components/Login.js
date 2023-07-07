@@ -5,9 +5,7 @@ import PageWrapper from './PageWrapper'
 
 export default function Login() {
 
-
     const [users, setUsers] = useState([])
-
 
     useEffect(() => {
         ucitajUsere()
@@ -22,9 +20,6 @@ export default function Login() {
     return (
         <PageWrapper>
             <LoginForm users={users}></LoginForm>
-
         </PageWrapper>
     )
-
-
 }

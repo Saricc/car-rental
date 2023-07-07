@@ -23,7 +23,7 @@ function App() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://m.atcdn.co.uk/vms/media/5131cf5afd34459f86f165d5258bcf29.jpg"
+            src="/slikeSve/ferrari.jpg"
             alt="First slide"
           />
           <Carousel.Caption>

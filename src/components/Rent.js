@@ -5,6 +5,10 @@ import Card from 'react-bootstrap/Card';
 import { Box, Modal } from "@mui/material";
 import RentalCalendar from "./RentalCalendar";
 import Cookies from 'universal-cookie';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import CardImage from "./CardImage";
 
 const style = {
     position: 'absolute',
@@ -30,7 +34,6 @@ export default function Rent() {
         const user = cookie.get('user')
         if (user) {
             setIsLogged(user)
-
         }
     }, [])
 
@@ -65,26 +68,36 @@ export default function Rent() {
         <PageWrapper>
 
             <p style={{ color: "whitesmoke" }}>TO RENT YOU HAVE TO BE LOGGED IN</p>
-            <div style={{ color: "#fff", display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 12 }}>
+            <Container>
+                <Row className="gy-2">
 
-                {carData.length > 0 && carData.map(car => {
-                    return <Card style={{ width: '16rem' }} key={`car-${car.id}`}>
-                        <Card.Img variant="top" src={car.image} />
-                        <Card.Body>
-                            <Card.Title>{car.brand}</Card.Title>
-                            <Card.Text>
-                                {car.model}
-                            </Card.Text>
-                            <Card.Text>
-                                CIJENA -  {car.price}
-                            </Card.Text>
 
-                            {isLogged && <Button variant="primary" onClick={() => showCalendar(car.id)}>RENT</Button>}
+                    {carData.length > 0 && carData.map(car => {
+                        return <Col lg="3" md="6" sm="12">
+                            <Card key={`car-${car.id}`}>
+                                <CardImage height={180}
+                                    src={car.image} />
+                                <Card.Body>
+                                    <Card.Title>{car.brand}</Card.Title>
+                                    <Card.Text>
+                                        {car.model}
+                                    </Card.Text>
+                                    <Card.Text>
+                                        CIJENA -  {car.price}
+                                    </Card.Text>
 
-                        </Card.Body>
-                    </Card>
-                })}
-            </div>
+                                    {isLogged && <div className="d-grid">
+                                        <Button size="sm" variant="primary" onClick={() => showCalendar(car.id)}>RENT</Button></div>}
+
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    })}
+
+                </Row>
+            </Container>
+
+
 
 
             <Modal

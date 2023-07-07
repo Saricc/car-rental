@@ -1,6 +1,7 @@
 import { useState } from "react"
-
-
+import { Button, Col, Container, Row } from "react-bootstrap";
+import Form from 'react-bootstrap/Form';
+import { Route } from "react-router-dom";
 
 export default function RegistrationForm({ storeRegData }) {
 
@@ -19,7 +20,6 @@ export default function RegistrationForm({ storeRegData }) {
         const cloneFormInputValues = { ...formInputValues };
         cloneFormInputValues[inputName].value = value
         setFormInputValues(cloneFormInputValues)
-
     }
 
     function registerUser() {
@@ -39,15 +39,26 @@ export default function RegistrationForm({ storeRegData }) {
     }
     return (
 
-        <div className='registrationForm' >
-            {Object.keys(formInputValues).map(inputName => {
-                return <div className='formInputGroup' key={`input-${inputName}`}>
-                    <label>{formInputValues[inputName].label}</label>
-                    <input onChange={(e) => updateFormInputValues(inputName, e)} />
+
+        <Container>
+            <Col xxl="6">
+                {Object.keys(formInputValues).map(inputName => {
+                    return <Row key={`input-${inputName}`}>
+                        <Form.Label >{formInputValues[inputName].label}</Form.Label>
+
+
+                        <Form.Control onChange={(e) => updateFormInputValues(inputName, e)}
+                            type="text"
+                        />
+                    </Row>
+
+                })}
+                <div className="d-grid" style={{ marginTop: 24 }}>
+                    <Button onClick={registerUser} variant="primary">Register</Button>
                 </div>
-            })}
-            <button onClick={registerUser} >register</button>
-        </div>
+            </Col>
+        </Container>
+
     )
 
 }

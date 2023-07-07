@@ -19,18 +19,13 @@ export default function LoginForm({ users }) {
             if (client.username === user.username && client.password === user.password) {
                 foundUser = client
                 return false
-
             }
-
         });
         if (foundUser) {
             cookie.set('user', foundUser, { path: '/' })
             navigate('/')
-
-
         } else alert('user not found')
     }
-
 
     function getLoginData(input, event) {
         const value = event.target.value
@@ -38,8 +33,6 @@ export default function LoginForm({ users }) {
         const clonedUser = { ...user }
         clonedUser[input] = value
         setUser(clonedUser)
-
-
     }
 
     return (

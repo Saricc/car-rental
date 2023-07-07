@@ -29,7 +29,6 @@ export default function Registration() {
                 alert(res.statusText)
             }
         })
-
     }
 
     return (
