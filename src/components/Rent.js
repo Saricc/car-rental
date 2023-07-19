@@ -16,7 +16,8 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'pink',
+    bgcolor:
+        "lightblue",
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -73,17 +74,19 @@ export default function Rent() {
 
 
                     {carData.length > 0 && carData.map(car => {
-                        return <Col lg="3" md="6" sm="12">
-                            <Card key={`car-${car.id}`}>
+                        return <Col lg="3" md="6" sm="12"
+                        >
+                            <Card key={`car-${car.id}`} style={{ backgroundImage: "linear-gradient(to right, #4880EC, #019CAD)" }}>
                                 <CardImage height={180}
                                     src={car.image} />
                                 <Card.Body>
-                                    <Card.Title>{car.brand}</Card.Title>
+                                    <Card.Title>{car.model}</Card.Title>
                                     <Card.Text>
-                                        {car.model}
+                                        {car.brand},  {car.year}
                                     </Card.Text>
+
                                     <Card.Text>
-                                        CIJENA -  {car.price}
+                                        Price per day - {car.price}€
                                     </Card.Text>
 
                                     {isLogged && <div className="d-grid">

@@ -1,0 +1,30 @@
+.aboutUsContainer>* {
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: solid black;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+
+}
+
+.welcome {
+    font-family: monospace;
+    font-style: oblique;
+
+
+    transition: rotate(180deg);
+}
+
+.aboutUsContainer>* :hover {
+    color: fuchsia;
+
+    font-weight: bolder;
+}
+
+.text {
+    font-family: monospace;
+    font-style: oblique;
+}

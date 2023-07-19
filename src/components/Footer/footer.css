@@ -1,5 +1,21 @@
 .page-footer {
+    background: linear-gradient(to right, #00AAFF, #00ff6C);
+    border-top: black solid 10px;
 
+}
 
-    background: linear-gradient(to right, #00AAFF, #00ff6C)
+.row {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-fluid:hover {
+    color: purple;
+
+    font-weight: bold;
+    font-family: monospace;
+    font-style: italic;
+
 }

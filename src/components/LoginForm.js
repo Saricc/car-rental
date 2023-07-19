@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import './loginform.css';
 
 export default function LoginForm({ users }) {
 
@@ -36,16 +37,20 @@ export default function LoginForm({ users }) {
     }
 
     return (
-        <div>
+        <div className="cont">
             <div className='formInputGroup'>
-                <label>username</label>
-                <input onChange={(e) => getLoginData('username', e)} />
+
+                <input className='input'
+                    onChange={(e) => getLoginData('username', e)} placeholder='username' />
             </div>
             <div className='formInputGroup'>
-                <label>password</label>
-                <input onChange={(e) => getLoginData('password', e)} />
+
+                <input
+                    className='input'
+                    onChange={(e) => getLoginData('password', e)} placeholder='password' />
             </div>
-            <button onClick={login}>login</button>
+            <button className='button'
+                onClick={login}>login</button>
 
         </div>
     )

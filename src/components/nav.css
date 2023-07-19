@@ -1,5 +1,6 @@
 .navbar {
-    background: linear-gradient(to right, #00AAFF, #00ff6C)
+    background: linear-gradient(to right, #00AAFF, #00ff6C);
+    border-bottom: black solid 10px;
 }
 
 .nav-link-wrapper {
@@ -15,5 +16,12 @@
 
 .car-image {
     height: 175px;
+
+}
+
+.me-auto {
+    font-family: fantasy;
+    font-style: italic;
+
 
 }

@@ -5,10 +5,6 @@ import './footer.css'
 const Footer = () => <footer className="page-footer font-small blue pt-4">
     <div className="container-fluid text-center text-md-left">
         <div className="row">
-            <div className="col-md-6 mt-md-0 mt-3">
-                <h5 className="text-uppercase">why us?</h5>
-                <p>Because we are in bussiness for over 30 years</p>
-            </div>
 
             <hr className="clearfix w-100 d-md-none pb-0" />
 

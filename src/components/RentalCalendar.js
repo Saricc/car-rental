@@ -21,6 +21,7 @@ export default function RentalCalendar({ selectedCar, setSelectedCar, setShowMod
     //provjera je li nas odabir slobodan
 
     function selectedDate(picked) {
+
         if (!picked[0] || !picked[1]) {
             return false
         }

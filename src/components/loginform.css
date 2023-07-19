@@ -1,0 +1,26 @@
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formInputGroup {
+    background-color: pink;
+    border-color: highlight fuchsia;
+}
+
+.input {
+    background-color: darksalmon;
+}
+
+.button {
+    background-color: darksalmon;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+    color: fuchsia;
+
+    font-weight: bolder;
+}

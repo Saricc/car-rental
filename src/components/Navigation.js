@@ -28,7 +28,7 @@ export default function Navigation() {
         <Navbar expand="lg" className="navbar">
 
             <Container className="">
-                <Navbar.Brand href="/">CarRentSarah</Navbar.Brand>
+                <Navbar.Brand href="/" style={{ color: "red", fontWeight: "bolder", fontStyle: "italic", fontFamily: "fantasy" }}>♡ Car Rental Sarah ♡ </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
 
@@ -36,10 +36,10 @@ export default function Navigation() {
 
                         <Nav.Link href="/AboutUs">About us</Nav.Link>
                         <Nav.Link href="/Rent">Rent</Nav.Link>
-
-                        <Nav.Link href="/Registration">Sign in</Nav.Link>
                         <Nav.Link href="/Login">Login</Nav.Link>
-                        <Nav.Link href="/Logout">Logout</Nav.Link>
+                        <Nav.Link href="/Registration">Sign in</Nav.Link>
+
+                        {isLogged && <Nav.Link href="/Logout">Logout</Nav.Link>}
 
 
 

@@ -44,17 +44,19 @@ export default function RegistrationForm({ storeRegData }) {
             <Col xxl="6">
                 {Object.keys(formInputValues).map(inputName => {
                     return <Row key={`input-${inputName}`}>
-                        <Form.Label >{formInputValues[inputName].label}</Form.Label>
+                        <Form.Label  >{formInputValues[inputName].label}</Form.Label>
 
 
-                        <Form.Control onChange={(e) => updateFormInputValues(inputName, e)}
+                        <Form.Control style={{ background: "pink" }}
+                            onChange={(e) => updateFormInputValues(inputName, e)}
                             type="text"
                         />
                     </Row>
 
                 })}
                 <div className="d-grid" style={{ marginTop: 24 }}>
-                    <Button onClick={registerUser} variant="primary">Register</Button>
+                    <Button style={{ background: "gray", width: "80px" }}
+                        onClick={registerUser} variant="primary">Register</Button>
                 </div>
             </Col>
         </Container>
